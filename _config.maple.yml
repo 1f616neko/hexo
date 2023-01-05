@@ -1,0 +1,11 @@
+favicon: /favicon.ico
+logo: /hexo/favicon.ico
+giscus:
+  enable: true
+  repo: 1f616neko/hexo
+  repo_id: R_kgDOIuXHsA
+  category: Giscus
+  category_id: DIC_kwDOIuXHsM4CTa5e
+  mapping: pathname
+Github: https://github.com/Emojigit
+Twitter: https://twitter.com/1F616EMO
