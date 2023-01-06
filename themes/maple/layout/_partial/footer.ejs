@@ -4,7 +4,7 @@
   <!-- copyright -->
   <div class="flex items-center gap-2">
     <span>© <% if (theme.copyright.start_year){ %><%= theme.copyright.start_year %>-<% } %><%= new Date().getFullYear();%></span>
-    <% if (theme.copyright.link) { %><a href="<%= theme.copyright.link %>" target="_blank" rel="noopener noreferrer"><%= author %></a><%} else { %><span><%= author %></span><% } %>
+    <% if(config.author){ %><% if (theme.copyright.link) { %><a href="<%= theme.copyright.link %>" target="_blank" rel="noopener noreferrer"><%= config.author %></a><%} else { %><span><%= author %></span><% } %><% } %>
   </div>
   <!-- powered by -->
   <div class="flex items-center gap-2">
