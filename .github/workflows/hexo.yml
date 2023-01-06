@@ -1,4 +1,9 @@
-name: Hexo Pages
+# Modified version of the GitHub Action scripts from https://hexo.io/docs/github-pages
+# Combined with the Jekyll starter workflow,
+# this script deploys Hexo sites to GitHub Pages
+# without commiting them onto a branch.
+
+name: Deploy Hexo site to Pages
 
 on:
   push:
@@ -43,10 +48,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
       - name: Build with Hexo
-        run: npm run build # configured to output to _site
+        run: npm run build
       - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
+        with:
+          path: "public/"
 
   # Deployment job
   deploy:
