@@ -3,9 +3,8 @@
   <%- partial('_plugins/busuanzi') %>
   <!-- copyright -->
   <div class="flex items-center gap-2">
-    <span>© 2022</span>
-    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
-    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+    <span>© <% if (theme.copyright.start_year){ %><%= theme.copyright.start_year %>-<% } %><%= new Date().getFullYear();%></span>
+    <% if (theme.copyright.link) { %><a href="<%= theme.copyright.link %>" target="_blank" rel="noopener noreferrer"><%= author %></a><%} else { %><span><%= author %></span><% } %>
   </div>
   <!-- powered by -->
   <div class="flex items-center gap-2">
@@ -14,5 +13,4 @@
     <span>&</span>
     <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
   </div>
-
 </footer>
