@@ -1,4 +1,10 @@
 <script>
+  function sendMessage(message) {
+    const iframe = document.querySelector("iframe.giscus-frame")
+    if (!iframe) return
+    iframe.contentWindow.postMessage({ giscus: message }, "https://giscus.app")
+  }
+
   (function () {
     const prefersDark =
       window.matchMedia &&
@@ -19,10 +25,14 @@
     const toggleDark = () => {
       console.log("toggle dark");
       const darkMode = document.documentElement.classList.toggle("dark");
-      localStorage.setItem("hexo-color-scheme", darkMode ? "dark" : "light");
+      const darklight = darkMode ? "dark" : "light"
+      sendMessage({setConfig: {theme: darklight,}});
+      localStorage.setItem("hexo-color-scheme", darklight);
       $("#toggle-dark").attr("icon", darkMode ? "ri:moon-line" : "ri:sun-line");
     };
 
     $("#toggle-dark").click(toggleDark);
   };
+  document.querySelector("iframe.giscus-frame").addEventListener("load", e => {sendMessage({setConfig: {theme: (localStorage.getItem("hexo-color-scheme") || "dark"),}});})
 </script>
+
