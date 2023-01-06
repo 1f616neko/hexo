@@ -1,5 +1,5 @@
 # Modified version of the GitHub Action scripts from https://hexo.io/docs/github-pages
-# Combined with the Jekyll starter workflow,
+# Combined with the Jekyll starter workflow https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml,
 # this script deploys Hexo sites to GitHub Pages
 # without commiting them onto a branch.
 
