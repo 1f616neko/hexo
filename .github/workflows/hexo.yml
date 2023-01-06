@@ -3,6 +3,10 @@
 # this script deploys Hexo sites to GitHub Pages
 # without commiting them onto a branch.
 
+# Original Licenses:
+# - Hexo GH Script: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+# - Jekyll Script: MIT License https://github.com/actions/starter-workflows/blob/main/LICENSE
+
 name: Deploy Hexo site to Pages
 
 on:
